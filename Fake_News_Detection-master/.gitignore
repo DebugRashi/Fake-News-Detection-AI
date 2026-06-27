@@ -1,0 +1,4 @@
+glove.6B.50d.txt
+new_model.pkl
+__pycache__/
+*.pyc

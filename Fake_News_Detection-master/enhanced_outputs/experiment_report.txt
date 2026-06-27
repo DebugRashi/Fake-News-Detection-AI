@@ -1,0 +1,38 @@
+Enhanced Fake News Detection Report
+===================================
+
+1. Model comparison
+- Text-only baseline: accuracy=0.625, FALSE F1=0.507, TRUE F1=0.698, macro F1=0.602
+- Text-only class_weight=balanced: accuracy=0.61, FALSE F1=0.559, TRUE F1=0.651, macro F1=0.605
+- Hybrid text + LIAR metadata: accuracy=0.64, FALSE F1=0.575, TRUE F1=0.688, macro F1=0.631
+
+2. Uncertainty-aware detection
+- Confidence threshold: 0.65
+- Accepted predictions: 407
+- Rejected uncertain predictions: 860
+- Accuracy on accepted predictions: 0.732
+
+3. Explainable prediction example
+- Statement: Says the health care reform law will require free sex change surgeries.
+- Prediction: FALSE
+- Probability FALSE: 0.707
+- Probability TRUE: 0.293
+- Top explanation features:
+  * free pushes toward FALSE (score -0.265)
+  * care pushes toward FALSE (score -0.196)
+  * sex pushes toward FALSE (score -0.169)
+  * says pushes toward FALSE (score -0.132)
+  * says health pushes toward TRUE (score 0.118)
+  * surgeries pushes toward FALSE (score -0.107)
+  * care reform pushes toward TRUE (score 0.091)
+  * health care pushes toward FALSE (score -0.090)
+
+4. Error analysis
+- Total wrong predictions: 456
+- Errors by true label: {'FALSE': 245, 'TRUE': 211}
+- Most common error subjects: {'candidates-biography': 31, 'education': 28, 'economy': 28, 'health-care': 25, 'federal-budget': 22, 'elections': 19, 'state-budget': 17, 'foreign-policy': 15, 'energy': 12, 'job-accomplishments': 12}
+- Errors by statement length: {'11-20': 248, '21-40': 126, '0-10': 79, '41+': 3}
+
+Conclusion
+The hybrid model performed best because it used both statement text and LIAR metadata.
+The uncertainty-aware model improved reliability by rejecting low-confidence claims.

@@ -1,0 +1,25 @@
+method,feature,pushes_toward,score
+lime,free,FALSE,-0.06891083104904253
+lime,reform,TRUE,0.058832629222124525
+lime,care,FALSE,-0.04557627616622792
+lime,sex,FALSE,-0.03727062728042845
+lime,change,TRUE,0.028407458391100416
+lime,health,TRUE,0.013059483360362192
+lime,surgeries,FALSE,-0.007832247442908377
+lime,require,FALSE,-0.006627099241712028
+shap,free,FALSE,-0.2630071705011112
+shap,care,FALSE,-0.18271805155906742
+shap,sex,FALSE,-0.16869132500277548
+shap,says health,TRUE,0.11744902612870044
+shap,surgeries,FALSE,-0.1067181391830833
+shap,says,FALSE,-0.10201733330709298
+shap,care reform,TRUE,0.09079679216847641
+shap,health care,FALSE,-0.08575090689150265
+coefficient_fallback,free,FALSE,-0.2650121234507562
+coefficient_fallback,care,FALSE,-0.1956213963094739
+coefficient_fallback,sex,FALSE,-0.16869132500277548
+coefficient_fallback,says,FALSE,-0.13157413248337385
+coefficient_fallback,says health,TRUE,0.11831105378231882
+coefficient_fallback,surgeries,FALSE,-0.1067181391830833
+coefficient_fallback,care reform,TRUE,0.09079679216847641
+coefficient_fallback,health care,FALSE,-0.08994374254102093
