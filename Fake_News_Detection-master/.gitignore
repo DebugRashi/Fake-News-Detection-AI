@@ -1,4 +1,9 @@
-glove.6B.50d.txt
-new_model.pkl
 __pycache__/
 *.pyc
+*.pyo
+
+glove.6B.50d.txt
+new_model.pkl
+
+.vscode/
+.ipynb_checkpoints/
